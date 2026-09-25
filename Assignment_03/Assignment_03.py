@@ -247,12 +247,12 @@ class Customer:
         return self.tier_name
 
 
-class NoneCustomer(Customer):
+class NoneTierCustomer(Customer):
     def __init__(self, name: str):
         super().__init__(name, "none")
 
 
-class SilverCustomer(Customer):
+class SilverTierCustomer(Customer):
     def __init__(self, name: str):
         super().__init__(name, "silver")
 
@@ -263,7 +263,7 @@ class SilverCustomer(Customer):
         return 2
 
 
-class GoldCustomer(Customer):
+class GoldTierCustomer(Customer):
     def __init__(self, name: str):
         super().__init__(name, "gold")
 
@@ -274,7 +274,7 @@ class GoldCustomer(Customer):
         return 3
 
 
-class PlatinumCustomer(Customer):
+class PlatinumTierCustomer(Customer):
     def __init__(self, name: str):
         super().__init__(name, "platinum")
 
@@ -286,10 +286,10 @@ class PlatinumCustomer(Customer):
 
 
 CUSTOMER_CLASSES = {
-    "none": NoneCustomer,
-    "silver": SilverCustomer,
-    "gold": GoldCustomer,
-    "platinum": PlatinumCustomer,
+    "none": NoneTierCustomer,
+    "silver": SilverTierCustomer,
+    "gold": GoldTierCustomer,
+    "platinum": PlatinumTierCustomer,
 }
 
 class Order:
